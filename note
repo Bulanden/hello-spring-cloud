@@ -1,0 +1,31 @@
+微服务架构中，需要几个基础的服务治理组件，包括服务注册与发现、服务消费、负载均衡、智能路由、配置管理等，
+有这几个基础组件相互协作，共同组建了一个简单的微服务系统
+微服务：spring cloud、dubbo
+
+Spring Boot + Spring Cloud = java原生云开发
+
+
+1、hello-spring-cloud-eureka：服务注册与发现
+    基于云的微服务应用，部署在容器中。客户端如何请求服务端，每个服务都有独立的ip和端口，且部署在容器里，如何动态地获取ip和端口？
+    为解决上述问题，因此需要一个服务注册于发现机制，让其自动注册到一个专门的服务器上，使调用方能通过计算机名或者应用名。
+    解决方案：zookeeper、eureka
+    本例使用eureka，通过应用的名字找到相应的服务
+
+2、hello-spring-cloud-config：分布式配置中心
+
+3、hello-spring-cloud-zipkin：分布式跟踪系统
+
+4、hello-spring-cloud-admin：监控管理系统
+
+5、hello-spring-cloud-service-admin：服务提供者
+    服务端需要实现负载均衡（LoadBalance）
+
+6、hello-spring-cloud-web-admin-feign/hello-spring-cloud-web-admin-ribbon：服务消费者
+    客户端需要添加熔断器（Hystrix）防止雪崩
+
+7、hello-spring-cloud-zuul：路由网关：路由转发和过滤
+
+
+
+
+
